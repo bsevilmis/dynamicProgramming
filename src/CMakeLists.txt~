@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 2.8)
+project( localgPbProject )
+
+find_package(OpenCV)
+IF(OpenCV_FOUND)
+  add_executable( localgPbProject main.cxx )
+  target_link_libraries(localgPbProject ${OpenCV_LIBS})
+ENDIF(OpenCV_FOUND)
+
